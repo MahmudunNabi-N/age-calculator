@@ -10,11 +10,12 @@ const Agecalculator = () => {
 
     return (
         //Main div 
-        <div className='w-full max-w-3xl bg-blue-100 flex items-center justify-center px-4 py-6'>
+        <div className='w-full max-w-3xl bg-blue-100 flex items-center justify-center px-4 py-6 gap-4'>
 
             {/* Birth Date Card */}
-            <div className= 'w-full max-w-md bg-white rounded-lg shadow-lg p-5 sm:p-8'>
+            <div className='w-full max-w-md bg-white rounded-lg shadow-lg p-5 sm:p-8'>
                 <h1 className='text-2xl sm:text-3xl font-bold text-blue-900 mb-7' >Your Birth Date</h1>
+
                 {/* //date input div */}
                 <div className='mb-4'>
                     <label className='block text-blue-900 text-[15px]  font-semibold mb-2' > Day </label>
@@ -64,6 +65,43 @@ const Agecalculator = () => {
                 <button className='w-full rounded-xl bg-blue-600 py-3 text-white font-semibold hover:bg-blue-700 transition'>Calculate My Age</button>
             </div>
 
+
+            {/* Your Age Result Card */}
+            <div className='w-full max-w-md bg-blue-300 rounded-lg shadow-lg p-5 sm:p-8'>
+                <h1 className='text-2xl sm:text-3xl font-bold text-blue-900 mb-7'>Your Age Result</h1>
+
+                {/* Year/Month/Day */}
+                <div className='grid grid-cols-3 gap-4 mb-6 sm:grid-cols-3 items-center'>
+                    {/* Year */}
+                    <div className='text-center  bg-white rounded-lg px-6 py-4'>
+                        <h3 className='text-4xl mt-2 font-bold text-blue-800'>--</h3>
+                        <p className='text-blue-800 font-semibold'>YEAR</p>
+                    </div>
+                    {/* Month */}
+                    <div className='text-center  bg-white rounded-lg px-3 p-3 py-4'>
+                        <h3 className='text-4xl mt-2 font-bold text-blue-800'>--</h3>
+                        <p className='text-blue-800 font-semibold'>MONTH</p>
+                    </div>
+                    {/* Day */}
+                    <div className='text-center  bg-white rounded-lg px-6 py-4'>
+                        <h3 className='text-4xl mt-2 font-bold text-blue-800'>--</h3>
+                        <p className='text-blue-800 font-semibold'>DAY</p>
+                    </div>
+
+                </div>
+
+
+                {/* Next Birthday */}
+                <div className='text-center  bg-white rounded-lg px-6 py-4 mb-6'>
+                    <h3 className='text-lg font-semibold text-blue-800'>Next Birthday</h3>
+                    <p className='text-4xl font-bold text-blue-800'>--</p>
+                    <p className='text-blue-800 font-semibold'>DAYS</p>
+                </div>
+
+                <button className='w-full mt-5 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition'>Share Result</button>
+
+
+            </div>
         </div>
     );
 };
