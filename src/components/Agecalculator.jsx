@@ -1,7 +1,7 @@
-import React from 'react';
 import { useState } from 'react';
-import AgeCalculation from './Calculateage';
 import Calculateage from './Calculateage';
+import NextBirthDay from './NextBirthDay';
+import ShareResult from './ShareResult';
 
 const Agecalculator = () => {
 
@@ -126,13 +126,13 @@ const Agecalculator = () => {
 
 
                     {/* Next Birthday */}
-                    <div className='text-center  bg-white rounded-lg px-6 py-4 mb-6'>
-                        <h3 className='text-lg font-semibold text-blue-800'>Next Birthday</h3>
-                        <p className='text-4xl font-bold text-blue-800'>--</p>
-                        <p className='text-blue-800 font-semibold'>DAYS</p>
-                    </div>
 
-                    <button className='w-full mt-5 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition'>Share Result</button>
+                    <NextBirthDay
+                    day={day}
+                    month={month}
+                    year={year}/>
+
+                    <ShareResult age={age}/>
 
 
                 </div>
